@@ -1,0 +1,69 @@
+/*
+	Thao Framework
+	Copyright 2013 - http://www.thaoframework.com
+	Licensed under http://www.apache.org/licenses/LICENSE-2.0
+*/
+
+.transitionEffect(@elemento) when (isstring(@elemento)){
+	-webkit-transition: e(@elemento);
+	-moz-transition: e(@elemento);
+	-o-transition: e(@elemento);
+	transition: e(@elemento);
+}
+
+.transitionEffect(@elemento) when not (isstring(@elemento)){
+	-webkit-transition: @elemento;
+	-moz-transition: @elemento;
+	-o-transition: @elemento;
+	transition: @elemento;
+}
+
+.borderRadius(@valore) when (isstring(@valore)){
+	-webkit-border-radius: e(@valore);
+	-moz-border-radius: e(@valore);
+	-o-border-radius: e(@valore);
+	border-radius: e(@valore);
+}
+
+.borderRadius(@valore) when not (isstring(@valore)){
+	-webkit-border-radius: @valore;
+	-moz-border-radius: @valore;
+	-o-border-radius: @valore;
+	border-radius: @valore;
+}
+
+.boxShadow(@valore) when (isstring(@valore)){
+	-webkit-box-shadow: e(@valore);
+	-moz-box-shadow: e(@valore);
+	-o-box-shadow: e(@valore);
+	box-shadow: e(@valore);
+}
+
+.boxShadow(@valore) when not (isstring(@valore)){
+	-webkit-box-shadow: 0px 0px 8px 0px @valore;
+	-moz-box-shadow: 0px 0px 8px 0px @valore;
+	-o-box-shadow: 0px 0px 8px 0px @valore;
+	box-shadow: 0px 0px 8px 0px @valore;
+	border-color: @valore;
+}
+
+.inputInset(@color) {
+	-webkit-box-shadow: inset 0px 0px 1px @color;
+	-moz-box-shadow: inset 0px 0px 1px @color;
+	-o-box-shadow: inset 0px 0px 1px @color;
+	box-shadow: inset 0px 0px 1px @color;
+}
+
+.boxShadowNone{
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	-o-box-shadow: none;
+	box-shadow: none;
+}
+
+.boxSizing(@type){
+	-webkit-box-sizing: @type;
+	-moz-box-sizing: @type;
+	-o-box-sizing: @type;
+	box-sizing: @type;
+}

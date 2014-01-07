@@ -1,0 +1,221 @@
+/*
+	Thao Framework
+	Copyright 2013 - http://www.thaoframework.com
+	Licensed under http://www.apache.org/licenses/LICENSE-2.0
+*/
+
+button,
+input[type="submit"],
+input[type="reset"]{
+	background-image: none;
+	*padding: 5px 30px ;
+	padding: 0;
+	cursor: pointer;
+	width: 130px;
+	height: 2.5em;
+	border: 1px solid;
+	border-color: #DCDCDC;
+	margin: 5px 3px;
+	text-rendering: optimizeLegibility;
+	.borderRadius(4px);
+}
+
+button,
+input[type="reset"],
+a.btn, input[type="submit"]{
+	color: @textColor;
+	background-color: #FFFFFF;
+}
+
+a{
+	&.btn-blue, &.btn-red, &.btn-orange, &.btn,
+	&.btn-yellow, &.btn-green, &.btn-black, &.btn-white{
+		display: inline-block;
+		padding: 9px 30px;
+		cursor: pointer;
+		border: 1px solid;
+		margin: 5px 3px;
+		font-size: 15px;
+		text-align: center;
+		text-rendering: optimizeLegibility;
+		.borderRadius(4px);
+		.transitionEffect(background-color linear 0.2s !important) ;
+
+		&[target="_blank"]:hover,
+		&[target="_top"]:hover{
+			color: inherit;
+			.transitionEffect(color linear 0.8s);
+		}
+	}
+	&.btn,&.btn-white{
+		border-color: #CCCCCC;
+	}
+	&.btn-big, &.big{
+		padding: 15px 35px;
+		font-size: 17px;
+		border-color: #CCCCCC;
+	}
+}
+
+
+a.btn-blue,
+button.blue, button.btn-blue,
+input[type="submit"].blue,
+input[type="reset"].blue,
+input[type="submit"].btn-blue,
+input[type="reset"].bt-blue{
+	border-color: #4169E1;
+	color: #FFFFFF;
+	&.flat{
+		background-color: #4169E1;
+	}
+	&.transparent{
+		background-color: transparent;
+		color: #4169E1;
+		
+		&:hover{
+			background-color: #4169E1;
+			color: #FFFFFF;
+			.transitionEffect(background-color linear 0.2s);
+		}
+	}
+
+}
+
+a.btn-red,
+button.red, button.btn-red,
+input[type="submit"].red,
+input[type="reset"].red,
+input[type="submit"].btn-red,
+input[type="reset"].btn-red{
+	border-color: #FF3019;
+	color: #FFFFFF;
+	&.flat{
+		background-color: #FF3019;
+	}
+	&.transparent{
+		background-color: transparent;
+		color: #FF3019;
+		
+		&:hover{
+			background-color: #FF3019;
+			color: #FFFFFF;
+			.transitionEffect(background-color linear 0.2s);
+		}
+	}
+}
+
+a.btn-orange,
+button.orange, button.btn-orange,
+input[type="submit"].orange,
+input[type="reset"].orange,
+input[type="submit"].btn-orange,
+input[type="reset"].btn-orange{
+	border-color: #FF8000;
+	color: #FFFFFF;
+	&.flat{
+		background-color: #FF8000;
+	}
+	&.transparent{
+		background-color: transparent;
+		color: #FF8000;
+
+		&:hover{
+			background-color: #FF8000;
+			color: #FFFFFF;
+			.transitionEffect(background-color linear 0.2s);
+		}
+	}
+}
+
+a.btn-yellow,
+button.yellow, button.btn-yellow,
+input[type="submit"].yellow,
+input[type="reset"].yellow,
+input[type="submit"].btn-yellow,
+input[type="reset"].btn-yellow{
+	border-color: #FFC72D;
+	color: #FFFFFF;
+	&.flat{
+		background-color: #FFC72D;	
+	}
+	&.transparent{
+		background-color: transparent;
+		color: #FFC72D;
+		
+		&:hover{
+			background-color: #FFC72D;
+			color: #FFFFFF;
+			.transitionEffect(background-color linear 0.2s);
+		}
+	}
+}
+
+a.btn-green,
+button.green, button.btn-green,
+input[type="submit"].green,
+input[type="reset"].green,
+input[type="submit"].btn-green,
+input[type="reset"].btn-green{
+	border-color: #4CAE4C;
+	color: #FFFFFF;
+	&.flat{
+		background-color: #4CAE4C;	
+	}
+	&.transparent{
+		background-color: transparent;
+		color: #4CAE4C;
+
+		&:hover{
+			background-color: #4CAE4C;
+			color: #FFFFFF;
+			.transitionEffect(background-color linear 0.2s);
+		}
+	}
+}
+
+a.btn-black,
+button.black, button.btn-black,
+input[type="submit"].black,
+input[type="reset"].black,
+input[type="submit"].btn-black,
+input[type="reset"].btn-black{
+	border-color: #171717;
+	color: #FFFFFF;
+	&.flat{
+		background-color: #171717;
+	}
+	&.transparent{
+		background-color: transparent;
+		color: #171717;
+
+		&:hover{
+			background-color: #171717;
+			color: #FFFFFF;
+			.transitionEffect(background-color linear 0.2s);
+		}
+	}
+}
+
+a.btn-white,
+button.white, button.btn-white,
+input[type="submit"].white,
+input[type="reset"].white,
+input[type="submit"].btn-white,
+input[type="reset"].btn-white{
+	border-color: #DBDBDB;
+	color: @textColor;
+	&.flat{
+		background-color: #FFFFFF;
+	}
+	&.transparent{
+		background-color: transparent;
+		color: #FFFFFF;
+
+		&:hover{
+			background-color: #FFFFFF;
+			color: @textColor;
+			.transitionEffect(background-color linear 0.2s);
+		}
+	}
+}

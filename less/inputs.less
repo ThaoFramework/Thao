@@ -1,0 +1,175 @@
+/*
+	Thao Framework
+	Copyright 2013 - http://www.thaoframework.com
+	Licensed under http://www.apache.org/licenses/LICENSE-2.0
+*/
+
+input[type="tel"],
+input[type="url"],
+input[type="text"],
+input[type="date"],
+input[type="time"],
+input[type="week"],
+input[type="color"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="search"],
+input[type="password"],
+input[type="datetime-local"]{
+	min-height: 20px;
+	border: 1px solid #E0E0E0;
+	padding: 6px 8px;
+	color: #5E5E5E;
+	width: auto;
+	background-color: #FFFFFF;
+	background-image: none;
+	.borderRadius(4px);
+	.inputInset(#E0E0E0);
+}
+
+input[type="color"]{
+	padding: 3px 4px;
+	height: 30px;
+	width: 30px;
+}
+
+input[type="search"].search,
+input[type="text"].search{
+	width: 80px;
+	max-width: 200px;
+	.boxSizing(border-box);
+	.transitionEffect("box-shadow linear 0.3s, border-color linear 0.3s, width linear 0.5s");
+
+	&:focus{
+		width: 200px;
+		.boxSizing(border-box);
+		.transitionEffect("box-shadow linear 0.3s, border-color linear 0.3s, width linear 0.5s");
+	}
+}
+
+input[type="tel"],
+input[type="url"],
+input[type="text"],
+input[type="date"],
+input[type="time"],
+input[type="week"],
+input[type="color"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="search"],
+input[type="password"],
+input[type="datetime-local"]{
+	&:focus{
+		.boxShadow(#75B9F0);
+		color: #474747;
+	}
+}
+
+select, textarea,
+input[type="tel"],
+input[type="url"],
+input[type="text"],
+input[type="date"],
+input[type="time"],
+input[type="week"],
+input[type="color"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="search"],
+input[type="password"],
+input[type="datetime-local"]{
+	margin: 5px 0px;
+}
+
+input, button,
+textarea, select,
+input[type="reset"]{
+	outline: none;
+	font-family: Helvetica, sans-serif, Arial;
+	font-size: 15px;
+	line-height: inherit;
+}
+
+textarea{
+	min-height: @textareaMinHeight;
+	max-height: @textareaMaxHeight;
+	max-width: 100%;
+	border: 1px solid #E0E0E0;
+	background-color: #FFFFFF;
+	background-image: none;
+	padding: @textareaPadding;
+	color: #5E5E5E;
+	line-height: @textareaLineHeight;
+	overflow: auto;
+	resize: none;
+	.borderRadius(4px);
+	.inputInset(#E0E0E0);
+	margin: 3px 0;
+	
+	&.resize{
+		resize: both !important;
+		min-width: 200px;
+	}
+}
+
+textarea:focus{
+	.transitionEffect("box-shadow linear 0.3s, border-color linear 0.3s, color linear 0.3s");
+	.boxShadow(#75B9F0);
+	color: #474747;
+}
+
+textarea,
+input[type="tel"],
+input[type="url"],
+input[type="text"],
+input[type="date"],
+input[type="time"],
+input[type="week"],
+input[type="color"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="search"],
+input[type="password"],
+input[type="datetime-local"]{
+	.boxSizing(border-box);
+	.transitionEffect("border-color linear 0.3s, box-shadow linear 0.3s, color linear 0.3s");
+	&.danger{
+		border-color: #FF0000;
+		color: #FF0000;
+		&:focus{
+			
+			.boxShadow(#FF0000);
+		}
+	}
+
+	&.warning{
+		border-color: #FF7F00;
+		color: #FF7F00;
+		&:focus{
+			
+			.boxShadow(#FF7F00);
+		}
+	}
+
+	&.confirm{
+		border-color: #1DDD00;
+		color: #1DDD00;
+		&:focus{
+			
+			.boxShadow(#1DDD00);
+		}
+	}
+
+	&.info{
+		border-color: #75B9F0;
+		color: #75B9F0;
+		&:focus{
+			
+			.boxShadow(#75B9F0);
+		}
+	}
+}

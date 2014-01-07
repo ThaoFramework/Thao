@@ -1,0 +1,56 @@
+/*
+	Thao Framework
+	Copyright 2013 - http://www.thaoframework.com
+	Licensed under http://www.apache.org/licenses/LICENSE-2.0
+*/
+
+form{
+	&.stylized{
+		.boxSizing(border-box);
+		margin: 20px 0;
+		fieldset{
+			margin: 20px 0 0 0;
+			legend{
+				font-size: 1.2em;
+				width: 100%;
+				margin-bottom: 5px;
+			}
+		}
+		&.pure{
+			input:not([type="submit"]){
+				padding: 6px 8px;
+				height: 30px;
+			}
+			input, button{
+				display: inline-block;
+				text-align: center;
+			}
+			button{
+				height: 30px;
+			}
+			a[class *= "btn-"], a.btn{
+				padding: 6px 30px;
+			}
+		}
+		&.stacked{
+			width: 300px;
+			select{
+				width: 100%;
+			}
+			input,
+			button, textarea{
+				display: inline-block;
+				height: 30px;
+				width: 100%;
+			}
+			[class *= "btn-"], a.btn{
+				padding: 6px 30px 7px 30px;
+				width: 100%;
+				.boxSizing(border-box);
+			}
+			button, input[type="submit"]{
+				padding: 0px !important;
+			}
+		}
+	}
+}

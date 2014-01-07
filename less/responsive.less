@@ -1,0 +1,322 @@
+/*
+	Thao Framework
+	Copyright 2013 - http://www.thaoframework.com
+	Licensed under http://www.apache.org/licenses/LICENSE-2.0
+*/
+
+@media screen and (max-width: 1200px) {
+	.container{
+		width: 980px;
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	.container{
+		width: 90%;
+		.nav.fixed-top{
+			width: 90%;
+		}
+	}
+	.nav{
+		.container{
+			width: 100%;
+		}
+	}
+}
+
+@media screen and (max-width: 768px){
+	*{
+		.transitionEffect(all linear 0s !important);
+	}
+
+	p{
+		line-height: 1.5em;
+	}
+
+	.container{
+		.nav .container{
+			width: 100%;
+		}
+
+		h1, .h1{
+			font-size: 1.75em;
+			margin: 25px 0px 10px 0;
+			font-weight: 300;
+		}
+
+		h2, .h2{
+			font-size: 1.65em;
+			margin: 25px 0px 10px 0;
+			font-weight: 300;
+		}
+
+		h3, .h3{
+			font-size: 1.5em;
+			margin: 25px 0px 10px 0;
+			font-weight: 300;
+		}
+
+		h4, .h4{
+			font-size: 1.3em;
+			margin: 25px 0px 10px 0;
+			font-weight: 300;
+		}
+
+		h5, .h5{
+			font-size: 1.2em;
+			margin: 25px 0px 10px 0;
+			font-weight: 300;
+		}
+
+		h6, .h6{
+			font-size: 1.05em;
+			margin: 25px 0px 10px 0;
+			font-weight: 300;
+		}
+
+		div, section, nav{
+			&.nav{
+				&.bordered{
+
+				}
+				&.collapse{
+					z-index: 9999999;
+					position: fixed;
+
+	    			top: 0;
+	    			box-shadow: 0px 0px 11px #BBBBBB;
+	    			width: 90%;
+	    			.borderRadius("0 0 4px 4px");
+					& a#open,
+					  a#close{
+						display: block;
+
+						float: right;
+						text-align: right;
+						font-weight: bold;
+						padding: 8px;
+					}
+					ul{
+						display: none;
+
+						&:target{
+							width: 100%;
+							display: block;
+							.boxSizing(border-box);
+							& > li{
+								width: 100%;
+								margin: 2px 0;
+
+								&:first-child,
+								&.first{
+									margin: 0px 0px 2px 0;
+								}
+
+								a{
+									padding: 6px 4px;
+									margin: 0;
+								}
+							}
+						}
+						&.stylized{
+							li{
+								ul{
+									&.submenu{
+										position: relative;
+										display: table;
+										width: 100%;
+										padding: 2px 15px;
+
+										.boxSizing(border-box);
+										.boxShadowNone;
+										li{
+											width: 100%;
+											margin: 2px 0;
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+		ul.stylized.center{
+			margin: 0;
+		}
+
+		div, section, header{
+			&.header{
+				.container{
+					h1 {
+						font-size: 4em;
+					}
+				}
+			}
+		}
+
+		iframe{
+			width: 100%;
+		}
+
+		input[type="tel"],
+		input[type="url"],
+		input[type="text"],
+		input[type="date"],
+		input[type="time"],
+		input[type="week"],
+		input[type="color"],
+		input[type="email"],
+		input[type="month"],
+		input[type="number"],
+		input[type="search"],
+		input[type="password"],
+		input[type="datetime-local"]{
+			.inputInsetNone;
+		}
+
+		textarea{
+			width: 100%;
+			.boxSizing(border-box);
+			margin: 5px 0;
+
+			&.resize{
+				resize: none !important;
+			}
+		}
+
+		input[type="search"],
+		input[type="text"].search{
+			width: 150px;
+			max-width: 150px;
+			
+			&:focus{
+				width: 150px;
+			}
+		}
+
+		.nav .menu-ul{
+			display: block;
+		}
+
+		div, section{
+			&[class *= "span"]{
+				width: 100%;
+				padding: 0.5em 0;
+			}
+			
+			&[class *= "column"]{
+				width: 100%;
+			}
+		}
+
+
+		img{
+			&.portrait{
+				padding: 2%;
+				.boxSizing(border-box);
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 480px) {
+	div, section, header{
+		&.header{
+			.container{
+				h1 {
+					font-size: 3.5em;
+				}
+			}
+		}
+	}
+	.container{
+		h1, .h1{
+			font-size: 1.65em;
+			margin: 25px 0px 10px 0;
+			font-weight: 300;
+		}
+
+		h2, .h2{
+			font-size: 1.5em;
+			margin: 25px 0px 10px 0;
+			font-weight: 300;
+		}
+
+		h3, .h3{
+			font-size: 1.4em;
+			margin: 25px 0px 10px 0;
+			font-weight: 300;
+		}
+
+		h4, .h4{
+			font-size: 1.3em;
+			margin: 25px 0px 10px 0;
+			font-weight: 300;
+		}
+
+		input[type="tel"],
+		input[type="url"],
+		input[type="text"],
+		input[type="date"],
+		input[type="time"],
+		input[type="week"],
+		input[type="color"],
+		input[type="email"],
+		input[type="month"],
+		input[type="number"],
+		input[type="search"],
+		input[type="password"],
+		input[type="datetime-local"]
+		input[type="text"].search,
+		input[type="text"].search:focus{
+			width: 100%;
+			.boxSizing(border-box);
+		}
+
+		form{
+			&.stylized{
+				&.stacked{
+					width: 100%;
+				}
+			}
+		}
+
+		button,
+		input[type="submit"]{
+			width: 100% !important;
+			margin: 3px 0px !important;
+		}
+
+		a{
+			&.btn, &.btn-blue, &.btn-red, &.btn-orange,
+			&.btn-yellow, &.btn-green, &.btn-black, &.btn-white{
+				display: block;
+				margin: 10px 0px !important;
+			}
+		}
+
+		input[type="search"],
+		input[type="text"].search{
+			width: 100%;
+			max-width: inherit;
+		}
+
+		textarea{
+			min-width: inherit;
+		}
+	}
+}
+
+@media screen and (max-width: 322px) {
+	div, section, header{
+		&.header{
+			.container{
+				h1 {
+					font-size: 2.5em;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,38 @@
+/*
+	Thao Framework
+	Copyright 2013 - http://www.thaoframework.com
+	Licensed under http://www.apache.org/licenses/LICENSE-2.0
+*/
+
+div, section, nav{
+	&.nav{
+
+		& a#open,
+		& a#close{
+			display: none;
+		}
+
+		&.fixed-top{
+			position: fixed;
+			top: 0px;
+			bottom: inherit !important;
+			z-index: 9999;
+			background-color: #FFFFFF;
+			width: inherit;
+			&.bordered{
+				box-shadow: 0px 0px 11px #BBBBBB;
+				.borderRadius("0 0 4px 4px");
+
+				/* IE < 9*/
+				border: 1px solid\9;
+				border-color: #CCCCCC\9;
+				border-top: none\9;
+
+				ul.pills, ul.tabs{
+					background-color: transparent;
+					border: none;
+				}
+			}
+		}
+	}
+}

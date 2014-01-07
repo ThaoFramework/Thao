@@ -1,0 +1,195 @@
+/*
+	Thao Framework
+	Copyright 2013 - http://www.thaoframework.com
+	Licensed under http://www.apache.org/licenses/LICENSE-2.0
+*/
+
+table{
+	width: 100%;
+	text-align: center;
+
+	td, th {
+		vertical-align: middle;
+	}
+
+	> thead {
+		> tr{
+			color: #505050;
+			font-weight: bold;
+			> th{
+				padding: 7px 0;
+			}
+		}
+	}
+
+	> tbody, tfoot{
+		> tr{
+			> td {
+				padding: 7px 0;
+			}
+		}
+	}
+
+	&.stylized{
+		background-color: whitesmoke;
+		border: 1px solid;
+		border-color: #DCDCDC;
+		border-radius: 5px;
+		color: #505050;
+		margin: 20px 0;
+		
+		> thead {
+			> tr {
+				border-bottom: 1px solid;
+				border-color: #DCDCDC;
+				> th{
+					color: #505050;
+					font-weight: bold;
+				}
+			}
+		}
+		
+		> tbody{
+			> tr{
+				background-color: #FFFFFF; 
+				> td {
+					padding: 10px 7px;
+					text-align: center;
+					color: #2E2E2E;
+				}
+
+				&:last-child{
+					border-bottom: 1px solid #DCDCDC;
+				}
+			}
+		}
+		
+		> tfoot {
+			> tr {
+				> td{
+					border-bottom: 1px solid;
+					border-color: #DCDCDC;
+					font-weight: bold;
+					text-align: center;
+					padding: 7px;
+				}
+			}
+		}
+
+		&.minimal{
+			> tbody{
+				> tr{
+					.transitionEffect(background-color linear 0.4s);
+					&:hover{
+						.transitionEffect(background-color linear 0.4s);
+						background-color: #FAFAFA;
+					}
+				}
+			}
+		}
+
+		&.grids{
+			> thead{
+				> tr{
+					> th{
+						border-right: 1px solid;
+						border-color: #DCDCDC;
+
+						&:last-child{
+							border-left: none;
+						}
+					}
+				}
+			}
+			> tbody{
+				> tr{
+					> td{
+						border-left: 1px solid;
+						border-bottom: 1px solid;
+						border-color: #DCDCDC;
+						padding: 10px 7px 9px 6px;
+						.transitionEffect(background-color linear 0.4s);
+
+						&:hover{
+							.transitionEffect(background-color linear 0.4s);
+							background-color: #FAFAFA;
+						}
+					}
+
+					&:last-child{
+						border-bottom: none;
+						> td{
+							padding: 10px 7px;
+						}
+					}
+				}
+			}
+			> tfoot{
+				> tr{
+					> td{
+						border-left: 1px solid;
+						border-bottom: 1px solid;
+						border-color: #DCDCDC;
+						.transitionEffect(background-color linear 0.4s);
+						&:hover{
+							.transitionEffect(background-color linear 0.4s);
+							background-color: #FAFAFA;
+						}
+					}
+				}
+			}
+		}
+
+		&.horizontal-border{
+			> tbody{
+				> tr{
+					border-bottom: 1px solid;
+					border-color: #DCDCDC;
+					.transitionEffect(background-color linear 0.4s);
+					&:hover{
+						.transitionEffect(background-color linear 0.4s);
+						background-color: #FAFAFA;
+					}
+
+					> td{
+						padding: 10px 7px 9px 6px;
+					}
+
+					&:last-child{
+						> td{
+							padding: 10px 7px;
+						}
+					}
+				}
+			}
+		}
+
+		&.vertical-border{
+			> thead{
+				> tr{
+					> th{
+						border-right: 1px solid;
+						border-color: #DCDCDC;
+
+						&:last-child{
+							border-left: none;
+						}
+					}
+				}
+			}
+			> tbody, > tfoot{
+				>tr{
+					>td{
+						border-left: 1px solid;
+						border-color: #DCDCDC;
+						.transitionEffect(background-color linear 0.4s);
+						&:hover{
+							.transitionEffect(background-color linear 0.4s);
+							background-color: #FAFAFA;
+						}
+					}
+				}
+			}
+		}
+	}
+}

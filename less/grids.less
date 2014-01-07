@@ -1,0 +1,102 @@
+/*
+	Thao Framework
+	Copyright 2013 - http://www.thaoframework.com
+	Licensed under http://www.apache.org/licenses/LICENSE-2.0
+*/
+
+div, section{
+	&.row, &[class *= "column"]{
+			> [class *= "span"]{
+			float: left;
+		}
+
+		[class *= "span"]{
+			& :first-child{
+				margin-top: 0;
+			}
+			& :last-child{
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+
+[class *= "span"]{
+	.boxSizing(border-box);
+	padding: 7px 10px;
+}
+
+.span1{
+	width: 100%;
+}
+
+.span2{
+	width: 50%;
+	*width: 47%;
+}
+
+.span3{
+	width: 33.33%;
+	*width: 27%;
+}
+
+.span4{
+	width: 25%;
+	*width: 22%;
+}
+
+.span5{
+	width: 20%;
+	*width: 17%;
+}
+
+div, section{
+	&.row{
+		width: 100%;
+		margin-bottom: 5px;
+	}
+	&.row,
+	&.column2-3, &.column1-3,
+	&.column1-4, &.column3-4{
+		display: inline-block;
+		height: auto;
+		position: relative;
+	}
+
+	&.column1-3{
+		width: 33%;
+		float: left;
+		.boxSizing(border-box);
+	}
+
+	&.column2-3{
+		width: 67%;
+		float: left;
+		.boxSizing(border-box);
+	}
+
+	&.column1-4{
+		width: 25%;
+		float: left;
+		.boxSizing(border-box);
+	}
+
+	&.column3-4{
+		width: 75%;
+		float: left;
+		.boxSizing(border-box);
+	}
+
+	&.cell{
+		display: table-cell;
+		vertical-align: middle;
+		text-align: center;
+	}
+
+	&.cover{
+		display: table;
+		height: 100%;
+		width: 100%;
+		background: no-repeat center center fixed;
+	}
+}
