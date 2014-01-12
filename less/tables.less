@@ -1,19 +1,21 @@
-/*
-	Thao Framework
-	Copyright 2013 - http://www.thaoframework.com
-	Licensed under http://www.apache.org/licenses/LICENSE-2.0
-*/
-
 table{
 	width: 100%;
-	text-align: center;
+	max-width: 100%;
+
+	border-collapse: collapse;
 
 	td, th {
 		vertical-align: middle;
+		display: table-cell;
 	}
 
 	> thead {
+		display: table-header-group;
+		vertical-align: middle;
+
 		> tr{
+			display: table-row;
+			vertical-align: inherit;
 			color: #505050;
 			font-weight: bold;
 			> th{
@@ -23,7 +25,13 @@ table{
 	}
 
 	> tbody, tfoot{
+		display: table-row-group;
+		vertical-align: middle;
+
 		> tr{
+			display: table-row;
+			vertical-align: inherit;
+
 			> td {
 				padding: 7px 0;
 			}
@@ -34,7 +42,6 @@ table{
 		background-color: whitesmoke;
 		border: 1px solid;
 		border-color: #DCDCDC;
-		border-radius: 5px;
 		color: #505050;
 		margin: 20px 0;
 		
