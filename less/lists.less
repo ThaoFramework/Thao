@@ -1,5 +1,24 @@
 ul{
 	list-style: none;
+
+	&.disc{
+		list-style-type: disc;
+	}
+
+	&.circle{
+		list-style-type: circle;
+	}
+
+	&.square{
+		list-style-type: square;
+	}
+
+
+	&.disc,
+	&.circle, &.square{
+		padding-left: 30px;
+		.boxSizing(border-box);
+	}
 	
 	&.stylized {
 		padding: 5px;
@@ -60,11 +79,18 @@ ul{
 
 			&.parent{
 				a{
-
 					&:hover + ul.submenu,
 					+ul.submenu:hover{
 						display: table;
 					}
+				}
+
+				i.sub{
+					border-top: 4px solid;
+					border-right: 4px solid transparent;
+					border-left: 4px solid transparent;
+					position: absolute;
+					margin: 8px 5px;
 				}
 			}
 
@@ -93,7 +119,7 @@ ul{
 
 							&:hover{
 								color: #FFFFFF;
-								background-color: #859EEC;
+								background-color: #4169E1;
 								.borderRadius(4px);
 								.transitionEffect("background-color linear 0.2s, color linear 0s");
 							}
@@ -116,6 +142,7 @@ ul{
 							a, a:hover{
 								.borderRadius(4px);
 								background-color: #4169E1;
+								padding: 7px 10px;
 							}
 						}
 					}
@@ -137,6 +164,15 @@ ul{
 						}
 					}
 				}
+				&.parent{
+					a{
+						padding: 7px 20px 7px 10px;
+						&:hover + ul.submenu,
+						+ul.submenu:hover{
+							display: table;
+						}
+					}
+				}
 
 				a{
 					font-weight: normal;
@@ -145,7 +181,7 @@ ul{
 
 					&:hover{
 						color: #FFFFFF;
-						background-color: #859EEC;
+						background-color: #3C69F8;
 						.borderRadius(4px);
 						.transitionEffect("background-color linear 0.2s, color linear 0s");
 					}
@@ -170,7 +206,7 @@ ul{
 						&.active{
 							a, a:hover{
 								.borderRadius("4px 4px 0 0");
-								padding: 10px;
+								padding: 8px 10px;
 								background-color: white;
 								color: #0000FF;
 								border: none;
@@ -179,7 +215,7 @@ ul{
 
 						a{
 							.borderRadius("4px 4px 0 0");
-							padding: 10px;
+							padding: 8px 10px;
 							color: #4169E1;
 							background-color: #F7F7F7;
 							&:hover{
@@ -201,6 +237,8 @@ ul{
 				&.last{
 					margin-right: 0px;
 				}
+
+				
 
 				a{
 					padding: 10px 15px;
@@ -249,7 +287,13 @@ ul{
 			}
 		}
 	}
-	
+}
+
+ol{
+	padding-left: 30px;
+}
+
+ul, ol{
 	li{
 		padding: 3px 0;
 
@@ -257,7 +301,7 @@ ul{
 			color: #FF0000;
 		}
 
-		ul{
+		ul, ol{
 			padding-left: 20px;
 		}
 	}
