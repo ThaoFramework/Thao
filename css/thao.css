@@ -276,11 +276,14 @@ img.portrait {
 .clear-left {
   clear: left;
 }
-.clear-left {
-  clear: left;
+.float-none {
+  float: none;
 }
-.clear-right {
-  clear: right;
+.float-left {
+  float: left;
+}
+.float-right {
+  float: right;
 }
 hr {
   background-color: #CCCCCC;
@@ -475,6 +478,7 @@ section.callout {
   color: white;
   position: relative;
   content: " ";
+  border: 1px solid;
 }
 div.callout .close,
 section.callout .close {
@@ -491,16 +495,11 @@ div.callout .close:after,
 section.callout .close:after {
   content: "x";
 }
-div.callout a,
-section.callout a {
-  font-weight: bold;
-}
 div.callout.info.flat,
 section.callout.info.flat,
 div.callout.callout-info.flat,
 section.callout.callout-info.flat {
   background-color: #0070E0;
-  border: 1px solid;
   border-color: #0070E0;
 }
 div.callout.info.skeu,
@@ -511,6 +510,7 @@ section.callout.callout-info.skeu {
   -moz-box-shadow: 0px 0px 11px #BBBBBB;
   -o-box-shadow: 0px 0px 11px #BBBBBB;
   box-shadow: 0px 0px 11px #BBBBBB;
+  border: none;
   background: #499bea;
   background: -moz-linear-gradient(top, #499bea 0%, #006de2 50%);
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #499bea), color-stop(50%, #006de2));
@@ -525,7 +525,6 @@ section.callout.info.transparent,
 div.callout.callout-info.transparent,
 section.callout.callout-info.transparent {
   background-color: transparent;
-  border: 1px solid;
   border-color: #0070E0;
   color: #0070E0;
 }
@@ -550,7 +549,6 @@ section.callout.danger.flat,
 div.callout.callout-danger.flat,
 section.callout.callout-danger.flat {
   background-color: #E9220C;
-  border: 1px solid;
   border-color: #E9220C;
 }
 div.callout.danger.skeu,
@@ -561,6 +559,7 @@ section.callout.callout-danger.skeu {
   -moz-box-shadow: 0px 0px 11px #BBBBBB;
   -o-box-shadow: 0px 0px 11px #BBBBBB;
   box-shadow: 0px 0px 11px #BBBBBB;
+  border: none;
   background: #FF3019;
   background: -moz-linear-gradient(top, #ff3019 0%, #ea0404 100%);
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ff3019), color-stop(100%, #ea0404));
@@ -575,7 +574,6 @@ section.callout.danger.transparent,
 div.callout.callout-danger.transparent,
 section.callout.callout-danger.transparent {
   background-color: transparent;
-  border: 1px solid;
   border-color: #CD2626;
   color: #CD2626;
 }
@@ -600,7 +598,6 @@ section.callout.warning.flat,
 div.callout.callout-warning.flat,
 section.callout.callout-warning.flat {
   background-color: #FF7F00;
-  border: 1px solid;
   border-color: #FF7F00;
 }
 div.callout.warning.skeu,
@@ -611,6 +608,7 @@ section.callout.callout-warning.skeu {
   -moz-box-shadow: 0px 0px 11px #BBBBBB;
   -o-box-shadow: 0px 0px 11px #BBBBBB;
   box-shadow: 0px 0px 11px #BBBBBB;
+  border: none;
   background: #ffa84c;
   background: -moz-linear-gradient(top, #ffa84c 0%, #ff7b0d 50%);
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffa84c), color-stop(50%, #ff7b0d));
@@ -625,7 +623,6 @@ section.callout.warning.transparent,
 div.callout.callout-warning.transparent,
 section.callout.callout-warning.transparent {
   background-color: transparent;
-  border: 1px solid;
   border-color: #FF7F00;
   color: #FF7F00;
 }
@@ -650,7 +647,6 @@ section.callout.alert.flat,
 div.callout.callout-alert.flat,
 section.callout.callout-alert.flat {
   background-color: #F3B200;
-  border: 1px solid;
   border-color: #F3B200;
 }
 div.callout.alert.transparent,
@@ -658,7 +654,6 @@ section.callout.alert.transparent,
 div.callout.callout-alert.transparent,
 section.callout.callout-alert.transparent {
   background-color: transparent;
-  border: 1px solid;
   border-color: #F3B200;
   color: #F3B200;
 }
@@ -683,7 +678,6 @@ section.callout.confirm.flat,
 div.callout.callout-confirm.flat,
 section.callout.callout-confirm.flat {
   background-color: #4CAE4C;
-  border: 1px solid;
   border-color: #4CAE4C;
 }
 div.callout.confirm.skeu,
@@ -694,6 +688,7 @@ section.callout.callout-confirm.skeu {
   -moz-box-shadow: 0px 0px 11px #BBBBBB;
   -o-box-shadow: 0px 0px 11px #BBBBBB;
   box-shadow: 0px 0px 11px #BBBBBB;
+  border: none;
   background: #3BD82E;
   background: -moz-linear-gradient(top, #3bd82e 1%, #1ba51b 50%);
   background: -webkit-gradient(linear, left top, left bottom, color-stop(1%, #3bd82e), color-stop(50%, #1ba51b));
@@ -708,7 +703,6 @@ section.callout.confirm.transparent,
 div.callout.callout-confirm.transparent,
 section.callout.callout-confirm.transparent {
   background-color: transparent;
-  border: 1px solid;
   border-color: #008000;
   color: #008000;
 }
@@ -731,7 +725,6 @@ section.callout.callout-confirm.transparent blockquote.blockquote {
 div.callout.dark.flat,
 section.callout.dark.flat {
   background-color: #3D3D3D;
-  border: 1px solid;
   border-color: #3D3D3D;
 }
 div.callout.dark.skeu,
@@ -740,6 +733,7 @@ section.callout.dark.skeu {
   -moz-box-shadow: 0px 0px 11px #BBBBBB;
   -o-box-shadow: 0px 0px 11px #BBBBBB;
   box-shadow: 0px 0px 11px #BBBBBB;
+  border: none;
   background: #45484d;
   background: -moz-linear-gradient(top, #45484d 0%, #000000 100%);
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #45484d), color-stop(100%, #000000));
@@ -752,7 +746,6 @@ section.callout.dark.skeu {
 div.callout.dark.transparent,
 section.callout.dark.transparent {
   background-color: transparent;
-  border: 1px solid;
   border-color: #3D3D3D;
   color: #3D3D3D;
 }
@@ -769,7 +762,6 @@ section.callout.dark.transparent blockquote.blockquote {
 div.callout.white.flat,
 section.callout.white.flat {
   background-color: #FFFFFF;
-  border: 1px solid;
   border-color: #CCCCCC;
   color: #363636;
 }
@@ -778,7 +770,6 @@ section.callout.sleek.flat,
 div.callout.callout-sleek.flat,
 section.callout.callout-sleek.flat {
   background-color: #BABABA;
-  border: 1px solid;
   border-color: #BABABA;
 }
 div.callout.sleek.skeu,
@@ -789,6 +780,7 @@ section.callout.callout-sleek.skeu {
   -moz-box-shadow: 0px 0px 11px #BBBBBB;
   -o-box-shadow: 0px 0px 11px #BBBBBB;
   box-shadow: 0px 0px 11px #BBBBBB;
+  border: none;
   background: #FFFFFF;
   background: -moz-linear-gradient(top, #ffffff 0%, #f6f6f6 47%, #ededed 100%);
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffffff), color-stop(47%, #f6f6f6), color-stop(100%, #ededed));
@@ -815,6 +807,7 @@ section.callout.callout-holo {
   font-family: "Roboto";
   font-weight: 400;
   color: black;
+  border: none;
   /* IE < 9*/
 
   border: 1px solid\9;
@@ -901,19 +894,15 @@ section[class*="column"] [class*="span"] :last-child {
 }
 .span2 {
   width: 50%;
-  *width: 47%;
 }
 .span3 {
   width: 33.33%;
-  *width: 27%;
 }
 .span4 {
   width: 25%;
-  *width: 22%;
 }
 .span5 {
   width: 20%;
-  *width: 17%;
 }
 div.row,
 section.row {
@@ -932,64 +921,35 @@ div.column1-2,
 section.column1-2 {
   width: 50%;
   float: left;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  box-sizing: border-box;
 }
 div.column1-3,
 section.column1-3 {
   width: 33%;
   float: left;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  box-sizing: border-box;
 }
 div.column2-3,
 section.column2-3 {
   width: 67%;
-  float: left;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  box-sizing: border-box;
 }
 div.column1-4,
 section.column1-4 {
   width: 25%;
   float: left;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  box-sizing: border-box;
 }
 div.column3-4,
 section.column3-4 {
   width: 75%;
   float: left;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  box-sizing: border-box;
 }
 div.column1-5,
 section.column1-5 {
   width: 20%;
   float: left;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  box-sizing: border-box;
 }
 div.column4-5,
 section.column4-5 {
   width: 80%;
   float: left;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  box-sizing: border-box;
 }
 div.cell,
 section.cell {
@@ -1005,6 +965,11 @@ section.cover {
   background: no-repeat center center fixed;
 }
 /* Rows, columns & span rules */
+div.nav,
+section.nav,
+nav.nav {
+  background-color: inherit;
+}
 div.nav a#open,
 section.nav a#open,
 nav.nav a#open,
@@ -1049,6 +1014,24 @@ nav.nav.fixed-top.bordered ul.tabs {
 /* .nav rules */
 ul {
   list-style: none;
+}
+ul.disc {
+  list-style-type: disc;
+}
+ul.circle {
+  list-style-type: circle;
+}
+ul.square {
+  list-style-type: square;
+}
+ul.disc,
+ul.circle,
+ul.square {
+  padding-left: 30px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
 }
 ul.stylized {
   padding: 5px;
@@ -1102,6 +1085,13 @@ ul.stylized li.parent a:hover + ul.submenu,
 ul.stylized li.parent a + ul.submenu:hover {
   display: table;
 }
+ul.stylized li.parent i.sub {
+  border-top: 4px solid;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+  position: absolute;
+  margin: 8px 5px;
+}
 ul.stylized li ul.submenu {
   width: auto;
   position: absolute;
@@ -1137,7 +1127,7 @@ ul.stylized li ul.submenu li a {
 ul.stylized li ul.submenu li.active a:hover,
 ul.stylized li ul.submenu li a:hover {
   color: #FFFFFF;
-  background-color: #859EEC;
+  background-color: #4169E1;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   -o-border-radius: 4px;
@@ -1163,6 +1153,7 @@ ul.stylized.pills ul.submenu li.active a:hover {
   -o-border-radius: 4px;
   border-radius: 4px;
   background-color: #4169E1;
+  padding: 7px 10px;
 }
 ul.stylized.pills li {
   -webkit-border-radius: 4px;
@@ -1182,6 +1173,13 @@ ul.stylized.pills li.active a:hover {
   color: #FFFFFF;
   background-color: #4169E1;
 }
+ul.stylized.pills li.parent a {
+  padding: 7px 20px 7px 10px;
+}
+ul.stylized.pills li.parent a:hover + ul.submenu,
+ul.stylized.pills li.parent a + ul.submenu:hover {
+  display: table;
+}
 ul.stylized.pills li a {
   font-weight: normal;
   padding: 7px 10px;
@@ -1192,7 +1190,7 @@ ul.stylized.pills li a {
 }
 ul.stylized.pills li a:hover {
   color: #FFFFFF;
-  background-color: #859EEC;
+  background-color: #3C69F8;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   -o-border-radius: 4px;
@@ -1228,7 +1226,7 @@ ul.stylized.tabs ul.submenu li.active a:hover {
   -moz-border-radius: 4px 4px 0 0;
   -o-border-radius: 4px 4px 0 0;
   border-radius: 4px 4px 0 0;
-  padding: 10px;
+  padding: 8px 10px;
   background-color: white;
   color: #0000FF;
   border: none;
@@ -1238,7 +1236,7 @@ ul.stylized.tabs ul.submenu li a {
   -moz-border-radius: 4px 4px 0 0;
   -o-border-radius: 4px 4px 0 0;
   border-radius: 4px 4px 0 0;
-  padding: 10px;
+  padding: 8px 10px;
   color: #4169E1;
   background-color: #F7F7F7;
 }
@@ -1300,13 +1298,21 @@ ul.stylized.pills.transparent,
 ul.stylized.submenu.transparent {
   background-color: transparent;
 }
-ul li {
+ol {
+  padding-left: 30px;
+}
+ul li,
+ol li {
   padding: 3px 0;
 }
-ul li a:hover {
+ul li a:hover,
+ol li a:hover {
   color: #FF0000;
 }
-ul li ul {
+ul li ul,
+ol li ul,
+ul li ol,
+ol li ol {
   padding-left: 20px;
 }
 /* <ul> & <li> rules */
@@ -1667,7 +1673,7 @@ input[type="search"].danger,
 input[type="password"].danger,
 input[type="datetime-local"].danger {
   border-color: #FF0000;
-  color: #FF0000;
+  color: #CD2626;
 }
 textarea.danger:focus,
 input[type="tel"].danger:focus,
@@ -1704,7 +1710,7 @@ input[type="search"].warning,
 input[type="password"].warning,
 input[type="datetime-local"].warning {
   border-color: #FF7F00;
-  color: #FF7F00;
+  color: #E04006;
 }
 textarea.warning:focus,
 input[type="tel"].warning:focus,
@@ -1741,7 +1747,7 @@ input[type="search"].confirm,
 input[type="password"].confirm,
 input[type="datetime-local"].confirm {
   border-color: #1DDD00;
-  color: #1DDD00;
+  color: #00AD00;
 }
 textarea.confirm:focus,
 input[type="tel"].confirm:focus,
@@ -1778,7 +1784,7 @@ input[type="search"].info,
 input[type="password"].info,
 input[type="datetime-local"].info {
   border-color: #75B9F0;
-  color: #75B9F0;
+  color: #2462E5;
 }
 textarea.info:focus,
 input[type="tel"].info:focus,
@@ -2217,7 +2223,7 @@ form.stylized.pure a.btn {
   padding: 6px 30px;
 }
 form.stylized.stacked {
-  width: 300px;
+  width: 100%;
 }
 form.stylized.stacked select {
   width: 100%;
@@ -2338,12 +2344,13 @@ form.stylized.stacked input[type="submit"] {
   .container section.nav.collapse ul,
   .container nav.nav.collapse ul {
     display: none;
+    border: none;
   }
   .container div.nav.collapse ul:target,
   .container section.nav.collapse ul:target,
   .container nav.nav.collapse ul:target {
     width: 100%;
-    display: block;
+    display: inline-block;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     -o-box-sizing: border-box;
