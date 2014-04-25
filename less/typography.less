@@ -1,19 +1,19 @@
 div, blockquote{
 	&.blockquote{
-		padding: 5px 10px;
-		border-left: 5px solid;
-		border-color: #E0E0E0;
-		width: 90%;
-		margin: 10px auto;
-		font-style: italic;
-		line-height: 1.3em;
-		display: inline-block;
+		padding: @blockquotePadding;
+		border-left: @blockquoteBorderLeft;
+		border-color: @blockquoteBorderColor;
+		width: @blockquoteWidth;
+		margin: @blockquoteMargin;
+		font-style: @blockquoteFontStyle;
+		line-height: @blockquoteLineHeight;
+		display: @blockquoteDisplay;
 
 		cite{
-			font-size: 0.8em;
-			font-style: normal;
-			display: table;
-			padding: 10px 0 2px 0;
+			font-size: @citeFontSize;
+			font-style: @citeFontStyle;
+			display: @citeDisplay;
+			padding: @citePadding;
 
 			&:before{
 				content: "- ";
@@ -23,58 +23,62 @@ div, blockquote{
 }
 
 q{
-	padding: 8px;
-	border-left: 3px solid #E0E0E0;
-	font-style: italic;
-	display: inline-block;
-	line-height: 1.3em;
+	padding: @qPadding;
+	border-left: @qBorderLeft;
+	font-style: @qFontStyle;
+	display: @qDisplay;
+	line-height: @qLineHeight;
 }
 
 h1, .h1{
-	font-size: 2.4em;
-	margin: 25px 0px 10px 0;
-	font-weight: 500;
-	line-height: 1.0em;
+	font-size: @h1FontSize;
+	margin: @h1Margin;
+	font-weight: @h1FontWeight;
+	line-height: @h1LineHeight;
 }
 
 h2, .h2{
-	font-size: 2em;
-	margin: 20px 0px 10px 0;
-	font-weight: 500;
-	line-height: 1.0em;
+	font-size: @h2FontSize;
+	margin: @h2Margin;
+	font-weight: @h2FontWeight;
+	line-height: @h2LineHeight;
 }
 
 h3, .h3{
-	font-size: 1.7em;
-	margin: 15px 0px 10px 0;
-	font-weight: 500;
-	line-height: 1.0em;
+	font-size: @h3FontSize;
+	margin: @h3Margin;
+	font-weight: @h3FontWeight;
+	line-height: @h3LineHeight;
 }
 
 h4, .h4{
-	font-size: 1.5em;
-	margin: 15px 0px 10px 0;
-	font-weight: 500;
-	line-height: 1.0em;
+	font-size: @h4FontSize;
+	margin: @h4Margin;
+	font-weight: @h4FontWeight;
+	line-height: @h4LineHeight;
 }
 
 h5, .h5{
-	font-size: 1.3em;
-	margin: 15px 0px 10px 0;
-	font-weight: 500;
-	line-height: 1.0em;
+	font-size: @h5FontSize;
+	margin: @h5Margin;
+	font-weight: @h5FontWeight;
+	line-height: @h5LineHeight;
 }
 
 h6, .h6{
-	font-size: 1.1em;
-	margin: 10px 0;
-	font-weight: 500;
-	line-height: 1.0em;
+	font-size: @h6FontSize;
+	margin: @h6Margin;
+	font-weight: @h6FontWeight;
+	line-height: @h6LineHeight;
 }
 
 p{
-	line-height: 1.125em;
-	font-size: 1em;
+	line-height: @pLineHeight;
+	font-size: @pFontSize;
+}
+
+p + p{
+	margin-top: 5px;
 }
 
 strong, b{

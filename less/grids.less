@@ -6,10 +6,10 @@ div, section{
 
 		[class *= "span"]{
 			& :first-child{
-				margin-top: 0;
+				margin-top: @spanFirstChildMarginTop;
 			}
 			& :last-child{
-				margin-bottom: 0;
+				margin-bottom: @spanLastChildMarginBottom;
 			}
 		}
 	}
@@ -21,7 +21,7 @@ div, section{
 }
 
 [class *= "span"]{
-	padding: 7px 10px;
+	padding: @spanPadding;
 }
 
 .span1{
@@ -47,7 +47,7 @@ div, section{
 div, section{
 	&.row{
 		width: 100%;
-		margin-bottom: 5px;
+		margin-bottom: @rowMarginBottom;
 	}
 	&.row, &[class *= "column"]{
 		display: inline-block;
