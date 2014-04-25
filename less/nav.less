@@ -1,25 +1,18 @@
 div, section, nav{
 	&.nav{
 		background-color: inherit;
+		width: 100%;
 
 		& a#open,
 		& a#close{
 			display: none;
 		}
 
-		&.fixed-top{
-			position: fixed;
-			top: 0px;
-			z-index: 999999999999;
-			background-color: #FFFFFF;
-			width: inherit;
-		}
-
 		&.bordered{
 			.boxShadow("0px 0px 11px #BBBBBB");
 			.borderRadius("0 0 4px 4px");
 
-			/* IE < 9*/
+			// IE
 			border: 1px solid\9;
 			border-color: #CCCCCC\9;
 			border-top: none\9;

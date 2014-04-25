@@ -28,8 +28,17 @@
 	}
 
 	.container{
-		.nav .container{
-			width: 100%;
+		.nav {
+			.container{
+				width: 100%;
+			}
+			&.fixed-top{
+				top: 0px;
+				z-index: 999999999999;
+				background-color: #FFFFFF;
+				width: inherit;
+				position: fixed;
+			}
 		}
 
 		h1, .h1{
@@ -72,19 +81,19 @@
 			&.nav{
 				&.collapse{
 					z-index: 9999999;
-					position: fixed;
+					width: 100%;
 	    			top: 0;
-	    			box-shadow: 0px 0px 11px #BBBBBB;
-	    			width: 90%;
+	    			.boxShadow("0px 0px 11px #BBBBBB");
 	    			.borderRadius("0 0 4px 4px");
-					& a#open,
-					  a#close{
+					& a#open, a#close{
 						display: block;
-
 						float: right;
 						text-align: right;
 						font-weight: bold;
 						padding: 8px;
+					}
+					&.fixed, &.fixed-top{
+						width: 90%;
 					}
 					ul{
 						display: none;
@@ -103,13 +112,18 @@
 								}
 
 								a{
-									padding: 6px 4px;
+									padding: 7px 10px;
 									margin: 0;
 								}
 							}
 						}
 						&.stylized{
+							padding: 5px 0;
 							li{
+								.borderRadius(0px);
+								a, a:hover{
+									.borderRadius(0px);
+								}
 								ul{
 									&.submenu{
 										position: relative;
