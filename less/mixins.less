@@ -1,44 +1,44 @@
-.transitionEffect(@elemento) when (isstring(@elemento)){
-	-webkit-transition: e(@elemento);
-	-moz-transition: e(@elemento);
-	-o-transition: e(@elemento);
-	transition: e(@elemento);
+.transitionEffect(@string) when (isstring(@string)){
+	-webkit-transition: e(@string);
+	-moz-transition: e(@string);
+	-o-transition: e(@string);
+	transition: e(@string);
 }
 
-.transitionEffect(@elemento) when not (isstring(@elemento)){
-	-webkit-transition: @elemento;
-	-moz-transition: @elemento;
-	-o-transition: @elemento;
-	transition: @elemento;
+.transitionEffect(@effect) when not (isstring(@effect)){
+	-webkit-transition: @effect;
+	-moz-transition: @effect;
+	-o-transition: @effect;
+	transition: @effect;
 }
 
-.borderRadius(@valore) when (isstring(@valore)){
-	-webkit-border-radius: e(@valore);
-	-moz-border-radius: e(@valore);
-	-o-border-radius: e(@valore);
-	border-radius: e(@valore);
+.borderRadius(@string) when (isstring(@string)){
+	-webkit-border-radius: e(@string);
+	-moz-border-radius: e(@string);
+	-o-border-radius: e(@string);
+	border-radius: e(@string);
 }
 
-.borderRadius(@valore) when not (isstring(@valore)){
-	-webkit-border-radius: @valore;
-	-moz-border-radius: @valore;
-	-o-border-radius: @valore;
-	border-radius: @valore;
+.borderRadius(@pixel) when not (isstring(@pixel)){
+	-webkit-border-radius: @pixel;
+	-moz-border-radius: @pixel;
+	-o-border-radius: @pixel;
+	border-radius: @pixel;
 }
 
-.boxShadow(@valore) when (isstring(@valore)){
-	-webkit-box-shadow: e(@valore);
-	-moz-box-shadow: e(@valore);
-	-o-box-shadow: e(@valore);
-	box-shadow: e(@valore);
+.boxShadow(@string) when (isstring(@string)){
+	-webkit-box-shadow: e(@string);
+	-moz-box-shadow: e(@string);
+	-o-box-shadow: e(@string);
+	box-shadow: e(@string);
 }
 
-.boxShadow(@valore) when not (isstring(@valore)){
-	-webkit-box-shadow: 0px 0px 8px 0px @valore;
-	-moz-box-shadow: 0px 0px 8px 0px @valore;
-	-o-box-shadow: 0px 0px 8px 0px @valore;
-	box-shadow: 0px 0px 8px 0px @valore;
-	border-color: @valore;
+.boxShadow(@color) when not (isstring(@color)){
+	-webkit-box-shadow: 0px 0px 8px 0px @color;
+	-moz-box-shadow: 0px 0px 8px 0px @color;
+	-o-box-shadow: 0px 0px 8px 0px @color;
+	box-shadow: 0px 0px 8px 0px @color;
+	border-color: @color;
 }
 
 .inputInset(@color) {
@@ -60,4 +60,12 @@
 	-moz-box-sizing: @type;
 	-o-box-sizing: @type;
 	box-sizing: @type;
+}
+
+.blur(@pixel){
+	-webkit-filter: blur(@pixel);
+	-moz-filter: blur(@pixel);
+	-ms-filter: blur(@pixel);
+	-o-filter: blur(@pixel);
+	filter: blur(@pixel);
 }
