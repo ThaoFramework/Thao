@@ -1,0 +1,299 @@
+ul{
+	&.stylized {
+		padding: 5px;
+		display: table;
+		.boxSizing(border-box);
+
+		&.left{
+			float: left;
+		}
+
+		&.right{
+			float: right;
+		}
+
+		&.center{
+			float:none;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		
+		li{
+			padding: 0px;
+			display: inline-block;
+			float: left;
+			margin: 0 5px;
+
+			&.first{
+				margin-left:0px;	
+			}
+			
+			&.last{
+				margin-right:0px;	
+			}
+
+			&.active {
+				a{
+					color: #0000FF;
+					font-weight: 300;
+				}
+			}
+
+			a{
+				color: @primaryColor;
+				display: block;	
+				padding: 10px;
+				white-space: nowrap;
+			}
+
+			&.parent{
+				a{
+					&:hover + ul.submenu,
+					+ul.submenu:hover{
+						display: table;
+					}
+				}
+
+				i.sub{
+					border-top: 4px solid;
+					border-right: 4px solid transparent;
+					border-left: 4px solid transparent;
+					position: absolute;
+					margin: 8px 5px;
+				}
+			}
+
+			ul{
+				&.submenu{
+					width: auto;
+					position: absolute;
+					background-color: #FFFFFF;
+					z-index: 9999999999999;
+					display: none;
+					padding: 5px 0;
+					.borderRadius("0 0 4px 4px");
+					.boxShadow("0 5px 10px #BBBBBB");
+					.boxSizing(content-box);
+
+					li{
+						float: none;
+						width: auto;
+						display: block;
+						min-width: 144px;
+						margin: 0;
+						font-size: 16px;
+
+						+ li{
+							margin-top: 4px;
+						}
+
+						&.active a, a{
+							padding: 5px 10px;
+							.borderRadius(0);
+
+							&:hover{
+								color: #FFFFFF;
+								background-color: @primaryColor;
+								.borderRadius(0);
+								.transitionEffect("background-color linear 0.2s, color linear 0s");
+							}
+						}
+					}
+				}
+			}
+		}
+
+		&.pills{
+			background-color: #FFFFFF;
+			.borderRadius(4px);
+			border: 1px solid;
+			border-color: #DDDDDD;
+
+			ul{
+				&.submenu{
+					li{
+						&.active{
+							a, a:hover{
+								.borderRadius(0);
+								background-color: @primaryColor;
+								padding: 7px 10px;
+							}
+						}
+					}
+				}
+			}
+
+			li{
+				&.active {
+					a{
+						background-color: @primaryColor;
+						color: #FFFFFF;
+						font-weight: normal;
+						padding: 7px 10px;
+						.borderRadius(4px);
+
+						&:hover{
+							color: #FFFFFF;
+							background-color: @primaryColor;
+						}
+					}
+				}
+				&.parent{
+					a{
+						padding: 7px 20px 7px 10px;
+						&:hover + ul.submenu,
+						+ul.submenu:hover{
+							display: table;
+						}
+					}
+				}
+
+				a{
+					font-weight: normal;
+					padding: 7px 10px;
+					.transitionEffect(color linear 0s);
+
+					&:hover{
+						color: #FFFFFF;
+						background-color: @primaryColor;
+						.borderRadius(4px);
+						.transitionEffect("background-color linear 0.2s, color linear 0s");
+					}
+				}
+			}
+		}
+
+		&.tabs{
+			background-color: #F7F7F7;
+			border-bottom: 1px solid;
+			border-color: #DDDDDD;
+			.borderRadius("4px 4px 0 0");
+			padding: 0;
+			margin-top: 5px;
+			margin-bottom: 5px;
+
+			ul{
+				&.submenu{
+					li{
+						margin-right: 0px;
+						margin-left: 0px;
+						&:hover{
+							a{
+								padding: 7px 10px;
+								border: none !important;
+							}
+						}
+
+						&.active{
+							a, a:hover{
+								.borderRadius(0);
+								padding: 7px 10px;
+								background-color: @primaryColor;
+								color: #FFFFFF;
+								border: none;
+							}
+						}
+
+						a{
+							.transitionEffect("all linear 0s");
+							.borderRadius(0);
+							padding: 7px 10px;
+							color: @primaryColor;
+							background-color: transparent;
+							&:hover{
+								.borderRadius(0);
+								background-color: @primaryColor;
+								color: #FFFFFF;
+							}
+						}
+					}
+				}
+			}
+
+			li{
+				margin: 0;
+				&.first{
+					margin-left: 0px;
+				}
+
+				&.last{
+					margin-right: 0px;
+				}
+
+				&.parent{
+					a{
+						padding: 10px 20px 10px 10px;
+					}
+				}
+
+				a{
+					padding: 10px 15px;
+					.transitionEffect(all linear 0s);
+					&:hover{
+						color: #0000FF;
+						.transitionEffect("background-color linear 0.2s, color linear 0s");
+					}
+				}
+
+				&.active {
+					a, a:hover{
+						.borderRadius("4px 4px 0 0");
+						border: 1px solid;
+						border-color: #DDDDDD;
+						border-bottom: none;
+						background-color: #FFFFFF;
+						margin-bottom: -1px;
+						padding: 9px 15px 11px 15px;
+						font-weight: normal;
+						color: @primaryColor;
+					}
+					
+				}
+				&:hover{
+					a{
+						.borderRadius("4px 4px 0 0");
+						border-bottom: none;
+						background-color: @primaryColor;
+
+						color: #FFFFFF;
+						.transitionEffect("background-color linear 0.2s, color linear 0s");
+					}
+				}
+			}
+		}
+
+		&.stacked{
+			li{
+				clear: both;
+				width: 100%;
+				margin: 2px 0;
+				+ li{
+					margin-top: 3px;
+				}
+				a{
+					color: @primaryColor;
+					.borderRadius(0);
+					&:hover{
+						background-color: @primaryColor;
+						.borderRadius(0);
+					}
+				}
+				&.active{
+					a, a:hover{
+						background-color: @primaryColor;
+						color: #FFFFFF;
+						.borderRadius(0);
+					}
+				}
+			}
+		}
+
+		&.tabs, &.pills,
+		&.submenu{
+			&.transparent{
+				background-color: transparent;
+				border: none;
+			}
+		}
+	}
+}
