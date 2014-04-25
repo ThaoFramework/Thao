@@ -3,4 +3,4 @@ Thao Framework
 
 **A sleek and minimal CSS framework for easier web development.**
 
-Current version: **Beta 4**
+Current version: **1.0**

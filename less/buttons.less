@@ -51,7 +51,6 @@ a{
 	}
 }
 
-
 a.btn-blue,
 button.blue, button.btn-blue,
 input[type="submit"].blue,
@@ -211,5 +210,12 @@ input[type="reset"].btn-white{
 			color: @textColor;
 			.transitionEffect(background-color linear 0.2s);
 		}
+	}
+}
+
+button, [class *= "btn"]{
+	&:active{
+		background-image: none;
+		.boxShadow("inset 0 3px 5px rgba(0,0,0,0.13)");
 	}
 }
