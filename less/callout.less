@@ -27,7 +27,8 @@ div, section{
 			.boxShadow("0px 0px 6px #CFCFCF");
 		}
 		
-		&.info, &.callout-info{
+		&.info, &.callout-info,
+		&.blue, &.callout-blue{
 			&.flat{
 				background-color: #0070E0;
 				border-color: #0070E0;
@@ -60,7 +61,8 @@ div, section{
 			}
 		}
 		
-		&.danger, &.callout-danger{
+		&.danger, &.callout-danger,
+		&.red, &.callout-red{
 			&.flat{
 				background-color: #E9220C;
 				border-color: #E9220C;
@@ -93,7 +95,8 @@ div, section{
 			}
 		}
 		
-		&.warning, &.callout-warning{
+		&.warning, &.callout-warning,
+		&.orange, &.callout-orange{
 			&.flat{
 				background-color: #FF7F00;
 				border-color: #FF7F00;
@@ -126,7 +129,8 @@ div, section{
 			}
 		}
 
-		&.alert, &.callout-alert{
+		&.alert, &.callout-alert,
+		&.yellow, &.callout-yellow{
 			&.flat{
 				background-color: #F3B200;
 				border-color: #F3B200;
@@ -148,7 +152,8 @@ div, section{
 			}
 		}
 		
-		&.confirm, &.callout-confirm{
+		&.confirm, &.callout-confirm,
+		&.green, &.callout-green{
 			&.flat{
 				background-color: #4CAE4C;
 				border-color: #4CAE4C;
@@ -181,7 +186,7 @@ div, section{
 			}
 		}
 		
-		&.dark{
+		&.dark, &.callout-dark{
 			&.flat{
 				background-color: #3D3D3D;
 				border-color: #3D3D3D;
@@ -214,7 +219,7 @@ div, section{
 			}
 		}
 
-		&.white{
+		&.white, &.callout-white{
 			&.flat{
 				background-color: #FFFFFF;
 				border-color: #CCCCCC;
@@ -250,13 +255,18 @@ div, section{
 			color: black;
 			border: none;
 
-			/* IE < 9*/
+			// IE
 			border: 1px solid\9;
 			border-color: #CCCCCC\9;
 		}
 
-		&.info, &.danger, &.warning,
-		&.alert, &.confirm, &.dark, &.sleek{
+		&.info, &.callout-info,	&.blue, &.callout-blue
+		&.danger, &.callout-danger,	&.red, &.callout-red, 
+		&.warning, &.callout-warning, &.orange, &.callout-orange,
+		&.alert, &.callout-alert, &.yellow, &.callout-yellow, 
+		&.confirm, &.callout-confirm, &.green, &.callout-green,
+		&.dark, &.callout-dark,
+		&.sleek, &.callout-sleek{
 			a{
 				color: #FFFFFF;
 			}
