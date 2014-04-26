@@ -195,7 +195,7 @@ ul{
 						}
 
 						a{
-							.transitionEffect("all linear 0s");
+							.transitionEffect("background-color linear 0s, color linear 0s");
 							.borderRadius(0);
 							padding: 7px 10px;
 							color: @primaryColor;
@@ -263,19 +263,25 @@ ul{
 		}
 
 		&.stacked{
+			width: 100%;
+			padding: 5px 0;
 			li{
 				clear: both;
 				width: 100%;
 				margin: 2px 0;
+				color: @textColor;
 				+ li{
 					margin-top: 3px;
 				}
 				a{
 					color: @primaryColor;
 					.borderRadius(0);
+					.transitionEffect("background-color linear 0s, color linear 0s");
 					&:hover{
 						background-color: @primaryColor;
+						color: #FFFFFF;
 						.borderRadius(0);
+						.transitionEffect("background-color linear 0s, color linear 0s");
 					}
 				}
 				&.active{
