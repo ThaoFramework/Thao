@@ -22,6 +22,26 @@ div, blockquote{
 	}
 }
 
+code{
+	color: #363636;
+	font-size: 13px;
+	padding: 1px 5px;
+	white-space: nowrap;
+	border: 1px solid #DDDDDD;
+	background-color: #F8F8F8;
+	font-family: Consolas, Courier, monospace;
+	.borderRadius(3px);
+	&.red{
+		color: #DF0000;
+	}
+	&.orange{
+		color: #FA7800
+	}
+	&.green{
+		color: #0FA302;
+	}
+}
+
 q{
 	padding: @qPadding;
 	border-left: @qBorderLeft;
@@ -78,7 +98,7 @@ p{
 }
 
 p + p{
-	margin-top: 5px;
+	margin-top: 15px;
 }
 
 strong, b{
