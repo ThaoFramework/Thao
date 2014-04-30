@@ -1,26 +1,57 @@
 div, section, nav{
-	&.nav{
-		background-color: inherit;
-		width: 100%;
-
-		& a#open,
-		& a#close{
-			display: none;
-		}
-
-		&.bordered{
-			.boxShadow("0px 0px 11px #BBBBBB");
-			.borderRadius("0 0 4px 4px");
-
-			// IE
-			border: 1px solid\9;
-			border-color: #CCCCCC\9;
-			border-top: none\9;
-
-			ul.pills, ul.tabs{
-				background-color: transparent;
-				border: none;
+	&.nav-wrapper{
+		.nav {
+			width: 100%;
+			display: table;
+			min-height: 36px;
+			background-color: #FCFCFC;
+			&.static{
+				position: static;
 			}
+			&.fixed-top{
+				top: 0;
+				left: 0;
+				width: 100%;
+				position: fixed;
+				z-index: 999999999999;
+				background-color: #FFFFFF;
+			}
+		
+			.nav-handle {
+				display: none;
+				cursor: pointer;
+				position: relative;
+				font-size: 40px;
+				padding: 7px 0;
+				width: 25px;
+				color: @primaryColor;
+				border-top: 2px solid;
+
+				position: absolute;
+				font-size: 1em;
+				top: 11px;
+				right: 7px;
+				z-index: 10;  
+
+				&:before, &:after {
+					position: absolute;
+					left: 0;
+					right: 0;
+					content: '';
+					border-top: 2px solid;
+				}
+
+				&:before {
+					top: 5px;
+				}
+
+				&:after {
+					top: 12px;
+				}
+			}
+		}
+		.nav-checkbox {
+			display: none;
 		}
 	}
 }
