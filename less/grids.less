@@ -48,6 +48,9 @@ div, section{
 	&.row{
 		width: 100%;
 		margin-bottom: @rowMarginBottom;
+		+ .row{
+			margin-top: 20px;
+		}
 	}
 	&.row, &[class *= "column"]{
 		display: inline-block;
