@@ -1,4 +1,4 @@
-Thao Framework
+This is Thao Framework
 ====
 
 **A sleek and minimal CSS framework for easier web development.**
